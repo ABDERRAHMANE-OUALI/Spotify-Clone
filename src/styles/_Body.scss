@@ -1,0 +1,161 @@
+.SideBar {
+  flex: 0.2;
+  padding: 23px 0 0 23px;
+  background-color: black;
+  // overflow-y: scroll;
+
+  /* width */
+  .SideBar__Logo {
+    height: 50px;
+  }
+  .SideBar__Icon {
+    color: white;
+  }
+  .SideBar__Option {
+    display: flex;
+    align-items: center;
+    h4 {
+      height: 40px;
+      padding-left: 20px;
+      margin-top: 1rem;
+      color: rgb(92, 83, 83);
+      transition: color 200ms ease-in-out;
+
+      &:hover {
+        cursor: pointer;
+        color: white;
+      }
+    }
+  }
+  .SideBar__Title {
+    font-weight: 800;
+    color: white;
+  }
+  .SideBar__Playlist {
+    .SideBarPlaylist__Item {
+      padding: 10px 0 10px 0;
+      color: rgb(92, 83, 83);
+      transition: color 200ms ease-in-out;
+
+      &:hover {
+        cursor: pointer;
+        color: white;
+      }
+    }
+  }
+}
+.Main {
+  width: 100%;
+  padding: 30px;
+  flex: 0.8;
+  background: linear-gradient(rgb(51, 51, 51), rgb(24, 24, 24));
+
+  .Header {
+    display: flex;
+    justify-content: space-between;
+    .Header__left {
+      display: flex;
+      align-items: center;
+      background-color: white;
+      border-radius: 10px;
+      padding: 10px;
+      .Header__icon {
+        transition: color 0.2s ease-in-out;
+        &:hover {
+          cursor: pointer;
+          color: gray;
+        }
+      }
+    }
+
+    .Header__right {
+      display: flex;
+      align-items: center;
+      color: white;
+
+      h4 {
+        margin-left: 9px;
+      }
+    }
+  }
+  .BodyMain {
+    margin: 20px 0;
+    display: flex;
+    color: white;
+    align-items: flex-end;
+
+    .BodyMain__img {
+      height: 20vh;
+      box-shadow: 0 4px 60px rgba($color: #000000, $alpha: 0.5);
+    }
+
+    .Body__infoText {
+      margin-left: 10px;
+      h4 {
+        font-size: xx-large;
+      }
+    }
+  }
+  .Body__song {
+    .Song__Notfound {
+      color: white;
+      position: absolute;
+      left: 48%;
+      top: 60%;
+    }
+    .Body__icons {
+      display: flex;
+      align-items: center;
+      color: white;
+      .Body__shuffle {
+        font-size: 50px;
+        color: green;
+      }
+
+      .MuiSvgIcon-root {
+        margin-right: 20px;
+        transition: transform 0.2s ease-in-out;
+
+        &:hover {
+          transform: scale(1.19);
+          cursor: pointer;
+        }
+      }
+    }
+    .Song__List {
+      color: white;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 10px;
+      padding: 20px;
+      border-radius: 9px;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        background-color: black;
+        opacity: 0.8;
+        cursor: pointer;
+      }
+      .Song__Img {
+        width: 50px;
+        height: 100%;
+        object-fit: contain;
+        margin-right: 10px;
+      }
+      .Song__info {
+        p {
+          font-size: 15px;
+          color: gray;
+        }
+      }
+    }
+  }
+  .NotFound__icon {
+    font-size: 6rem;
+  }
+  .Song__Notfound{
+    text-align: center;
+    line-height: 2.8rem;
+  }
+}

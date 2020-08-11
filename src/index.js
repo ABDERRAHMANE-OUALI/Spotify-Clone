@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './styles/index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { DataLayer } from './Hooks/DataLayer';
+import { initialState, reducer } from './Hooks/reducer';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <DataLayer initialState={initialState} reducer={reducer}>
+      <App />
+    </DataLayer>
   </React.StrictMode>,
   document.getElementById('root')
 );

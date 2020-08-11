@@ -1,0 +1,68 @@
+.Player__Footer {
+  position: fixed;
+  bottom: 0;
+  height: 65px;
+  width: 100%;
+  background-color: rgb(40, 40, 40);
+  color: white;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  .PLayerFooter__Parts {
+    display: flex;
+    justify-content: space-between;
+    width: 98%;
+  }
+  .Footer__left {
+    flex: 0.3;
+    display: flex;
+    flex-direction: row;
+  }
+  .Footer__Img {
+    object-fit: contain;
+    width: 60px;
+    height: 60px;
+  }
+  .Footer__left__Description {
+    margin-left: 9px;
+    &:first-child {
+      font-size: larger;
+    }
+    &:last-child {
+      font-size: small;
+    }
+  }
+  .Footer__center {
+    flex: 0.4;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 300px;
+    transition: trasform;
+
+    .Footer__Green {
+      @extend .Footer__Icon;
+      color: green;
+    }
+    .Footer__Play {
+      @extend .Footer__Icon;
+    }
+    .Footer__Icon {
+      transition: transform 0.2s ease-in-out;
+
+      &:hover {
+        transform: scale(1.2);
+        cursor: pointer;
+      }
+    }
+  }
+  .Footer__right {
+    display: flex;
+    align-items: center;
+    flex: 0.3;
+  }
+  .MuiSlider-colorPrimary {
+    color: green;
+  }
+}
